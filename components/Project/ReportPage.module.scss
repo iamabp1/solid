@@ -1,0 +1,67 @@
+.reportPage {
+    .header {
+      background-color: #16181d;
+      padding: 1rem 0;
+      
+      .logo {
+        height: 50px;
+        margin-right: 1rem;
+      }
+  
+      .projectName {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0;
+      }
+    }
+  
+    .stickyMenu {
+      z-index: 8;
+      border-bottom: 1px solid #31343b;
+      top: 80px;
+      .nav-link {
+        color: #cecece;
+  
+        &:hover {
+          color: #00ffd0;
+        }
+      }
+    }
+  
+    .section {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      padding: 2rem;    
+      display: flex;
+      align-items: stretch;  
+
+      h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+      
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    }
+  }
+  .borders {
+    border: 2px solid #d1cfcf; /* Dark border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 15px; /* Optional padding for spacing inside */
+  }
+  .custom-border {
+    border: 2px solid #dfdfdf; /* Dark border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 15px; /* Optional padding for spacing inside */
+  }
+  .equal-height-row {
+    display: flex;
+    align-items: stretch; /* Ensures all children have equal height */
+  }
+  .equal-height-row > div {
+    display: flex;
+    flex-direction: column; /* Allows nested content to adapt properly */
+  }
+  
