@@ -1,9 +1,9 @@
-import BlogPage from "./index";
+// import BackToTop from "../backToTop";
+import ProjectsPage from "./index";
 
 export const metadata = {
-  title: `NEWS & BLOGS | Codeum`,
-  subtitle: `Latest News & Blogs`,
-  description: `Latest updates and insights from our team.`,
+  title: "Audit & KYC Reports - Codeum",
+  description: "Codeum Smart Contract Audit & Security",
   openGraph: {
     title: "Codeum | Smart Contract Audit",
     description: "Protect your projects with Codeum's top-tier smart contract audits, KYC services, and custom blockchain solutions.",
@@ -26,12 +26,13 @@ export const metadata = {
   },
 };
 
-const BlogLayout = () => {
+const ProjectsPageLayout = () => {
   return (
     <>
-      <BlogPage />
+      <ProjectsPage />
+      {/* <BackToTop /> */}
     </>
   );
 };
 
-export default BlogLayout;
+export default ProjectsPageLayout;

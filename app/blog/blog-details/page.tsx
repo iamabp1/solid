@@ -4,9 +4,28 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Blog Details Page - Solid SaaS Boilerplate",
-  description: "This is Blog details page for Solid Pro",
-  // other metadata
+  title: "Details - Codeum",
+  description: "Codeum",
+  openGraph: {
+    title: "Codeum | Smart Contract Audit",
+    description: "Protect your projects with Codeum's top-tier smart contract audits, KYC services, and custom blockchain solutions.",
+    images: [
+      {
+        url: "https://codeum.org/images/codeum-ogg.png",
+        alt: "Codeum Smart Contract Audit",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    url: "https://codeum.org",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Codeum | Smart Contract Audit",
+    description: "Protect your projects with Codeum's top-tier smart contract audits, KYC services, and custom blockchain solutions.",
+    images: "https://codeum.org/images/codeum-ogg.png",
+  },
 };
 
 const SingleBlogPage = async () => {
