@@ -40,7 +40,7 @@ export default function Home() {
       <FeaturesTab />
       <FunFact />
       <Integration />
-      <Blog />
+      {/* <Blog /> */}
       <CTA />
 
     </main>
