@@ -1,39 +1,31 @@
 import React from "react";
 import { Feature } from "@/types/feature";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { icon, title, description } = feature;
 
   return (
     <>
-      <motion.div
-        variants={{
-          hidden: {
-            opacity: 0,
-            y: -10,
-          },
-
-          visible: {
-            opacity: 1,
-            y: 0,
-          },
-        }}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
-      >
-        <div className="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary">
-          <Image src={icon} width={36} height={36} alt="title" />
-        </div>
-        <h3 className="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+      <div>
+        <div className="features-row-border h-[1px] w-full"></div>
+        <div className="features-row-border absolute left-1/2 top-1/2 hidden h-[1px] w-1/2 -translate-y-1/2 rotate-90 lg:left-1/4 lg:block lg:-translate-x-1/3"></div>
+        <div className="features-row-border absolute right-1/2 top-1/2 hidden h-[1px] w-1/2 -translate-y-1/2 rotate-90 lg:right-[8.3%] lg:block"></div>
+        <div className="flex flex-wrap justify-center">
+        <div className="group relative overflow-hidden px-4 py-8 text-center sm:py-10 lg:px-8 xl:px-13 xl:py-15">
+          <span className="features-bg absolute left-0 top-0 -z-1 h-full w-full opacity-0 group-hover:opacity-100 undefined"></span>
+          <span className="icon-border relative mx-auto mb-8 inline-flex h-20 w-full max-w-[80px] items-center justify-center rounded-full">
+          <Image src={icon} width={36} height={36} alt="title"  />
+          </span>
+       
+        <h3 className="text-black dark:text-white xl:text-itemtitle mb-4 text-lg font-semibold ">
           {title}
         </h3>
         <p>{description}</p>
-      </motion.div>
+        </div>
+        <div className="features-row-border h-[1px] w-full"></div>
+        </div>
+      </div>
     </>
   );
 };
